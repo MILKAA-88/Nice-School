@@ -1,0 +1,23 @@
+body {
+    text-align: center;
+    background: black;
+    color: white;
+}
+
+.nextpages {
+    background: rgb(0, 110, 255);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin: 19px;
+    padding: 20px;
+}
+.logo {
+    margin: 0 auto;
+    display: flex;
+    height: 50vh;
+}
+.nextpages:hover {
+    border: 1px solid white;
+}
