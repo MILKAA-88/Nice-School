@@ -1,0 +1,21 @@
+body {
+    text-align:center;
+    background: rgb(9, 9, 9);
+    color: white;
+}
+.mg {
+    background: rgb(21, 19, 19);
+    border-radius: 15px;
+    padding: 50px 10px;
+    font-size: 20px;
+    color: white;
+    border: 1px solid white;
+}
+.logOut {
+    background: rgb(0, 76, 255);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding: 15px 20px;
+    cursor: pointer;
+}

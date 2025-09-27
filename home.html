@@ -1,21 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nice School - </title>
+    <link rel="stylesheet" href="/home.css">
 </head>
 <body>
-    <h1> Nice-School</h1>
-    <p> Moyenne général : <span></span>-</p>
+    <h1> Nice School</h1>
+    <p class="mg"> Moyenne général : <span></span>-</p>
+    <div class="matieres">
+        <h1> Matieres : </h1>
+        <p style="display:none" class="math"> Math : </p>
+        <p style="display:none"> Français : </p>
+        <p style="display:none"> Histoire-géo : </p>
+        <p style="display:none"> Physique : </p>
+        <p style="display:none"> Svt : </p>
+        <p style="display:none"> Technologique : </p>
+    </div>
     <footer>
         <a href="/idk.html"> Mentions légal </a>
                 <a href="/idk.html"> Crédits </a>
     </footer>
+    <button class="logOut" onclick="window.location.href ='/Login/Login.html' "> Se déconnecter </button>
 <script>
     const token = sessionStorage.getItem("token");
 const prenom = sessionStorage.getItem("prenom");
 const nom = sessionStorage.getItem("nom");
 </script>
+<script src="/home.js"></script>
 </body>
 </html>
