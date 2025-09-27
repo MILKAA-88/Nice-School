@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "api-ecoledirecte": "^1.4.4",
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  },
+  "name": "nice-school",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

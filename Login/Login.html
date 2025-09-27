@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Nice School - Connection </title>
+  <title>Nice School - Connexion</title>
     <link rel="stylesheet" href="/Login/Login.css">
 </head>
 <body>
-    <h1> Se connecter </h1>
-    <div class="input">
-    <input type="text" placeholder="nom d'utilisateur">
-    <input type="password" placeholder="Mot de passe "> 
-    </div>
-    <button> Se connecter </button>
-    <p> Vos identifiants ne sont pas enregistré !</p>
+  <h1>Se connecter</h1>
+  
+  <form id="loginForm" class="inputs">
+    <input type="text" id="username" placeholder="Nom d'utilisateur" required>
+    <input type="password" id="password" placeholder="Mot de passe" required>
+    <button type="submit">Se connecter</button>
+  </form>
+  <p id="status"></p>
+    <p>Vos identifiants ne sont pas enregistrés !</p>
+    <script src="/server/index.js"></script>
 </body>
 </html>
