@@ -1,5 +1,5 @@
 # Nice-School
-En préparation : 
+En préparation 
 
 Contacts : 
 
