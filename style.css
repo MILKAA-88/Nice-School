@@ -21,6 +21,7 @@ body {
     margin: 0 auto;
     display: flex;
     height: 50vh;
+    border-radius: 15px;
 }
 .ent {
     color: white;
