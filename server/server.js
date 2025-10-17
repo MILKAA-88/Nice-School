@@ -18,7 +18,13 @@ app.use(express.static(path.join(__dirname, "..")));
 
 // ⚡ Route racine : renvoie le login.html
 app.get("/", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../Login/login.html"), (err) => {
+res.sendFile(path.resolve(__dirname, "../Login/login.html"), (err) => {
+  if (err) {
+    console.error(err);
+    res.status(500).send("Impossible de charger le login.html");
+  }
+});
+
     if (err) {
       console.error(err);
       res.status(500).send("Impossible de charger le login.html");
