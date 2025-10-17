@@ -1,7 +1,7 @@
 # Nice-School
-En préparation 
+En préparation.....
 
 Contacts : 
 
 Instagram : milkaa_km
-Discord : 
+Discord : milkaa330_47221
