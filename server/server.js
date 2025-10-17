@@ -7,7 +7,7 @@ const path = require("path");
 
 const app = express();
 const PORT = 3000;
-const JWT_SECRET = "ta_cle_secrete"; // À remplacer par une vraie clé secrète en production
+const JWT_SECRET = "ta_cle_secrete"; // Remplace par une vraie clé secrète en production
 
 // ⚡ Middleware
 app.use(cors({ origin: "http://localhost:3000" })); // si tu changes le port, modifie ici
@@ -18,14 +18,15 @@ app.use(express.static(path.join(__dirname, "..")));
 
 // ⚡ Route racine : renvoie le login.html
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "Login", "login.html"), function(err) {
+  res.sendFile(path.resolve(__dirname, "../Login/login.html"), (err) => {
     if (err) {
       console.error(err);
-      res.status(500).send("Impossible de charger le login.");
+      res.status(500).send("Impossible de charger le login.html");
     }
   });
 });
-// Route de login
+
+// ⚡ Route de login
 app.post("/api/login", async (req, res) => {
   const { username, password } = req.body;
 
@@ -59,7 +60,7 @@ app.post("/api/login", async (req, res) => {
   }
 });
 
-// Middleware pour vérifier le token JWT
+// ⚡ Middleware pour vérifier le token JWT
 function authenticateToken(req, res, next) {
   const authHeader = req.headers["authorization"];
   const token = authHeader && authHeader.split(" ")[1];
@@ -77,7 +78,7 @@ function authenticateToken(req, res, next) {
   });
 }
 
-// Route protégée pour récupérer les notes
+// ⚡ Route protégée pour récupérer les notes
 app.get("/api/notes", authenticateToken, async (req, res) => {
   try {
     // ⚠️ Pour l’instant, mot de passe temporaire, à sécuriser plus tard
