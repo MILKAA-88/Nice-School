@@ -3,14 +3,28 @@ const express = require("express");
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
 const { Session } = require("node-ecole-directe");
+const path = require("path");
 
 const app = express();
 const PORT = 3000;
 const JWT_SECRET = "ta_cle_secrete"; // À remplacer par une vraie clé secrète en production
 
-app.use(cors({ origin: "http://localhost:5500" })); // Remplace par l'origine de ton frontend
+// ⚡ Middleware
+app.use(cors({ origin: "http://localhost:3000" })); // si tu changes le port, modifie ici
 app.use(express.json());
 
+// Sert tous les fichiers statiques (HTML, CSS, JS, images)
+app.use(express.static(path.join(__dirname, "..")));
+
+// ⚡ Route racine : renvoie le login.html
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "Login", "login.html"), function(err) {
+    if (err) {
+      console.error(err);
+      res.status(500).send("Impossible de charger le login.");
+    }
+  });
+});
 // Route de login
 app.post("/api/login", async (req, res) => {
   const { username, password } = req.body;
@@ -66,14 +80,14 @@ function authenticateToken(req, res, next) {
 // Route protégée pour récupérer les notes
 app.get("/api/notes", authenticateToken, async (req, res) => {
   try {
-    // Utilise la session déjà authentifiée (à adapter selon ta logique)
-    const session = new Session(req.user.username, "mot_de_passe_temporaire"); // ⚠️ À remplacer par une solution sécurisée
+    // ⚠️ Pour l’instant, mot de passe temporaire, à sécuriser plus tard
+    const session = new Session(req.user.username, "mot_de_passe_temporaire");
     await session.login();
-    const notes = await session.fetchNotes(); // Utilise la méthode de l'API
+    const notes = await session.fetchNotes();
 
     res.json({
       success: true,
-      notes: notes, // Renvoie les notes récupérées
+      notes: notes,
     });
   } catch (error) {
     console.error("Erreur :", error);
@@ -81,6 +95,7 @@ app.get("/api/notes", authenticateToken, async (req, res) => {
   }
 });
 
+// ⚡ Démarrage du serveur
 app.listen(PORT, () => {
   console.log(`Serveur démarré sur http://localhost:${PORT}`);
 });
