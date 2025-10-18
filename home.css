@@ -1,6 +1,6 @@
 body {
     text-align:center;
-    background: rgb(9, 9, 9);
+    background: rgb(47, 143, 167);
     color: white;
 }
 .mg {
@@ -17,5 +17,48 @@ body {
     color: white;
     border-radius: 5px;
     padding: 15px 20px;
+    cursor: pointer;
+}
+.maMath {
+    background:red;
+    border-radius: 5px;
+    padding: 20px 20px;
+    cursor: pointer;
+}
+.maFr {
+     background: white;
+    border-radius: 5px;
+    padding: 20px 20px;
+    cursor: pointer;
+    color: black;
+}
+.maHG {
+    background: rgb(231, 153, 8);
+    border-radius: 5px;
+    padding: 20px 20px;
+    cursor: pointer;
+}
+.maPhy {
+     background:green;
+    border-radius: 5px;
+    padding: 20px 20px;
+    cursor: pointer;
+}
+.maSVT {
+ background:rgb(211, 12, 226);
+    border-radius: 5px;
+    padding: 20px 20px;
+    cursor: pointer;
+}
+.maT {
+ background:rgb(208, 15, 182);
+    border-radius: 5px;
+    padding: 20px 20px;
+    cursor: pointer;
+}
+.maLa {
+ background:rgb(117, 193, 23);
+    border-radius: 5px;
+    padding: 20px 20px;
     cursor: pointer;
 }

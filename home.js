@@ -29,6 +29,9 @@ async function fetchNotes() {
         // Affiche la moyenne générale
         const moyenneGeneraleElement = document.getElementById("moyenneGenerale");
         moyenneGeneraleElement.textContent = data.moyenneGenerale || "—";
+        
+        // Applique la couleur en fonction de la moyenne
+        updateMoyenneColor(data.moyenneGenerale);
 
         // Affiche les notes par matière
         displayNote("noteMaths", data.notes?.maths);
@@ -48,4 +51,19 @@ async function fetchNotes() {
 function displayNote(elementId, note) {
     const element = document.getElementById(elementId);
     element.textContent = note !== undefined ? note : "—";
+}
+
+function updateMoyenneColor(moyenne) {
+    const moyenneElement = document.getElementById("moyenneGenerale");
+    if (!moyenne || moyenne === "—") return;
+
+    const moyenneNum = parseFloat(moyenne);
+    
+    if (moyenneNum >= 15) {
+        moyenneElement.style.backgroundColor = "#4CAF50"; 
+    } else if (moyenneNum >= 10) {
+        moyenneElement.style.backgroundColor = "#2196F3"; 
+    } else {
+        moyenneElement.style.backgroundColor = "#F44336"; 
+    }
 }

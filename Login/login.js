@@ -6,9 +6,9 @@ form.addEventListener("submit", async (e) => {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
 
-  // Vérification des champs vides
   if (username === '' || password === '') {
-    statusText.textContent = "Veuillez remplir tous les champs avant de vous connecter.";
+    statusText.textContent = "Pour l'instant aucune vérification est faite.";
+    window.location.href = "/home.html";
     return;
   }
 
@@ -39,3 +39,4 @@ form.addEventListener("submit", async (e) => {
     console.error(err);
   }
 });
+
