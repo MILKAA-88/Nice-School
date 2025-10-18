@@ -1,11 +1,11 @@
 body {
   font-family: Arial, sans-serif;
-  background: #5a7af6;
+  background: #c247eb; /* #5a7af6; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 130vh;
   margin: 0;
   color: black;
 }
@@ -42,8 +42,8 @@ h1 {
 /* Bouton */
 button {
   padding: 12px;
-  width: 250px;
-  background: #3498db;
+  width: 290px;
+  background: #8632fb; /* #3498db; */
   color: white;
   border: none;
   border-radius: 8px;
@@ -79,4 +79,9 @@ h2 {
 .h7 {
   text-align: center;
   color: white;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 19px; 
 }
