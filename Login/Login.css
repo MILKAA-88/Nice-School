@@ -51,7 +51,6 @@ button {
   cursor: pointer;
   transition: background 0.3s, transform 0.1s;
 }
-
 button:hover {
   background: #2980b9;
 }

@@ -21,6 +21,30 @@
             max-width: 800px;
             margin: 0 auto;
         }
+                button {
+    padding: 12px;
+    width: 250px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+}
+
+.back {
+    display: block;
+    margin: 20px auto 0; /* centre horizontalement */
+}
+
+.back:hover {
+    background: #3a29b9;
+}
+
+.back:active {
+    transform: scale(0.97);
+}
     </style>
 </head>
 <body>
@@ -93,6 +117,6 @@
             </p>
         </section>
     </div>
-    <button onclick="window.location.href = '/Login/Login.html'"> Retour </button>
+    <button onclick="window.location.href = '/Login/Login.html'" class="back"> Retour </button>
 </body>
 </html>
