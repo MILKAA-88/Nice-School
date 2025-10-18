@@ -1,18 +1,23 @@
 const EcoleDirecte = require("node-ecole-directe");
 const session = new EcoleDirecte.Session();
+
 (async () => {
-    const compte = await session.connexion("identifiant", "mot-de-passe");
-    // Vous êtes maintenant connecté à école directe !
+    try {
+        const compte = await session.connexion(process.env.ED_USERNAME, process.env.ED_PASSWORD);
+        console.log("Connexion réussie à EcoleDirecte !");
 
-    // Récupération des notes
-    const notes = await compte.fetchNotes();
+        // Récupération des notes
+        const notes = await compte.fetchNotes();
+        console.log("Notes récupérées");
 
-    // Récupération de l'emploi du temps
-    const emploiDuTemps = await compte.fetchEmploiDuTemps(); // Sans date spécifiée
-    const emploiDuTempsDu18Au22 = await compte.fetchEmploiDuTemps(
-    "2020-03-18",
-    "2020-03-22"
-    ); // Avec une date de début et une date de fin
+        // Récupération de l'emploi du temps
+        const emploiDuTemps = await compte.fetchEmploiDuTemps(); // Sans date spécifiée
+        const dateDebut = new Date().toISOString().split('T')[0];
+        const dateFin = new Date(Date.now() + 5 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
+        const emploiDuTempsSemaine = await compte.fetchEmploiDuTemps(
+            dateDebut,
+            dateFin
+        ); // Emploi du temps sur 5 jours
 
     // Récupération du cahier de texte
     const cahierDeTexte = await compte.fetchCahierDeTexte();
@@ -20,4 +25,8 @@ const session = new EcoleDirecte.Session();
 
     // Récupération des éléments de vie scolaire (retards, absences, etc...)
     const vieScolaire = await compte.fetchVieScolaire();
+    console.log("Données de vie scolaire récupérées");
+    } catch (error) {
+        console.error("Erreur :", error.message);
+    }
 })();
