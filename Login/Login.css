@@ -42,7 +42,7 @@ h1 {
 /* Bouton */
 button {
   padding: 12px;
-  width: 290px;
+  width: 250px;
   background: #8632fb; /* #3498db; */
   color: white;
   border: none;
@@ -52,7 +52,7 @@ button {
   transition: background 0.3s, transform 0.1s;
 }
 button:hover {
-  background: #2980b9;
+  background: #b510c4;
 }
 
 button:active {

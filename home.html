@@ -5,38 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nice School - Accueil</title>
     <link rel="stylesheet" href="/home.css">
+      <link rel="icon" type="image/png" href="/nice-school.png">
 </head>
 <body>
     <h1>Nice-School</h1>
     <p> Status : BETA </p>
     <p class="mg">Moyenne générale : <span id="moyenneGenerale">-</span></p>
+    <h3 style="display:none;">Attention ! : évaluation pour demain en <span style="display:none;" id="evaluationAlert"></span>.Révise bien.</h3>
     <div class="matieres">
         <h2>Matières :</h2>
         <div class="maMath">
-            <p>Maths : <span class="maMath" id="noteMaths">—</span></p>
+            <p>Maths : <span id="noteMaths">-</span></p>
         </div>
         <div class="maFr">
-            <p>Français : <span class="maFr" id="noteFrancais">—</span></p>
+            <p>Français : <span id="noteFrancais">—</span></p>
         </div>
         <div class="maHG">
-            <p>Histoire-Géo : <span class="maHg" id="noteHistoireGeo">—</span></p>
+            <p>Histoire-Géo : <span id="noteHistoireGeo">—</span></p>
         </div>
         <div class="maPhy">
-            <p>Physique : <span class="maPhy" id="notePhysique">—</span></p>
+            <p>Physique : <span id="notePhysique">—</span></p>
         </div>
         <div class="maSVT">
-            <p>SVT : <span class="maSVT" id="noteSvt">—</span></p>
+            <p>SVT : <span id="noteSvt">—</span></p>
         </div>
         <div class="maT">
-            <p>Technologie : <span class="maT" id="noteTechnologie">—</span></p>
+            <p>Technologie : <span id="noteTechnologie">—</span></p>
         </div>
         <div class="maLa">
-            <p>Latin : <span class="maLa" id="noteLatin">—</span></p>
+            <p>Latin : <span id="noteLatin">—</span></p>
         </div>
     </div>
     <button class="logOut" onclick="window.location.href='/Login/Login.html'">Se déconnecter</button>
-    <p> Version : 1.1 </p>
-    <p> Bientôt vous pourrez changer la couleurs des fonds de matières !</p>
+    <p> Version : 1.2 </p>
     <script src="/testapi.js"></script>
 </body>
 </html>

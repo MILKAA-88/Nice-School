@@ -1,6 +1,6 @@
 body {
     text-align:center;
-    background: rgb(47, 143, 167);
+    background: #c247eb;
     color: white;
 }
 .mg {
@@ -24,6 +24,7 @@ body {
     border-radius: 5px;
     padding: 20px 20px;
     cursor: pointer;
+    border: white 0.1em solid;
 }
 .maFr {
      background: white;
@@ -37,28 +38,38 @@ body {
     border-radius: 5px;
     padding: 20px 20px;
     cursor: pointer;
+     border: white 0.1em solid;
 }
 .maPhy {
      background:green;
     border-radius: 5px;
     padding: 20px 20px;
     cursor: pointer;
+     border: white 0.1em solid;
 }
 .maSVT {
  background:rgb(211, 12, 226);
     border-radius: 5px;
     padding: 20px 20px;
     cursor: pointer;
+     border: white 0.1em solid;
 }
 .maT {
  background:rgb(208, 15, 182);
     border-radius: 5px;
     padding: 20px 20px;
     cursor: pointer;
+     border: white 0.1em solid;
 }
 .maLa {
  background:rgb(117, 193, 23);
     border-radius: 5px;
     padding: 20px 20px;
     cursor: pointer;
+     border: white 0.1em solid;
+}
+h3 {
+    background: red;
+    border-radius: 0.5em;
+    padding: 1em 10em;
 }
