@@ -1,21 +1,34 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('loginForm');
-  const statusText = document.getElementById('status');
+// login.js
+const form = document.getElementById("loginForm");
+const status = document.getElementById("status");
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const username = document.getElementById('username')?.value?.trim() || '';
-    const password = document.getElementById('password')?.value || '';
-
-    // Si l'un des champs est vide => redirection vers home.html
-    if (!username || !password) {
-      if (statusText) statusText.textContent = "Champs vides détectés. Redirection vers l'accueil...";
-      setTimeout(() => {
-        window.location.href = '/home.html';
-      }, 1500);
-      return;
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+  
+  // Envoie des identifiants au serveur
+  try {
+    const res = await fetch("/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ username, password })
+    });
+    
+    const result = await res.json();
+    
+    if (result.success) {
+      // Connexion OK → redirection
+      window.location.href = "home.html";
+    } else {
+      // Identifiants incorrects → message
+      status.textContent = "Identifiants incorrects";
+      status.style.color = "red";
     }
-
-    if (statusText) statusText.textContent = 'Connexion en cours...';
-  });
+  } catch (err) {
+    status.textContent = "Erreur serveur";
+    status.style.color = "white";
+    console.error(err);
+  }
 });
