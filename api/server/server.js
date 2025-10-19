@@ -4,7 +4,7 @@ const path = require("path");
 
 const app = express();
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "../public"))); // dossier contenant login.html et home.html
+app.use(express.static(path.join(__dirname, "../../public"))); 
 
 app.post("/Login", async (req, res) => {
     const { username, password } = req.body;
