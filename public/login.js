@@ -1,11 +1,12 @@
 document.getElementById("loginForm").addEventListener("submit", async (event) => {
-    event.preventDefault();
+    event.preventDefault(); // Empêche le formulaire de se soumettre normalement
 
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
     try {
-        const response = await fetch("/login/", {
+        
+        const response = await fetch("https://nice-school.onrender.com/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -17,12 +18,13 @@ document.getElementById("loginForm").addEventListener("submit", async (event) =>
 
         if (response.ok) {
             // Redirige vers la page d'accueil après une connexion réussie
-            window.location.href = "/pubic/home.html";
+            window.location.href = "/public/home.html"; e
         } else {
             // Affiche un message d'erreur
             document.getElementById("status").textContent = data.detail || "Erreur de connexion";
         }
     } catch (error) {
-        document.getElementById("status").textContent = "Erreur réseau";
+        // Affiche une erreur réseau
+        document.getElementById("status").textContent = "Erreur réseau : " + error.message;
     }
 });
