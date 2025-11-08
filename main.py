@@ -10,7 +10,7 @@ app = FastAPI()
 # Configuration CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://ton-projet.vercel.app"],  # Remplace par l'URL de ton frontend Vercel
+    allow_origins=["https://nice-school-seven.vercel.app/"],  # Remplace par l'URL de ton frontend Vercel
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
