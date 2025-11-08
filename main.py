@@ -35,3 +35,11 @@ async def login(request: Request):
 
     # 5. Si la connexion réussit, renvoyer les données de l'API
     return {"message": "Connexion réussie", "data": response.json()}
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"message": "Bonjour, ton serveur FastAPI est en ligne !"}
+
