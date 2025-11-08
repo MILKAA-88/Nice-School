@@ -7,7 +7,7 @@ import httpx  # Pour faire des requêtes HTTP vers l'API ÉcoleDirecte
 app = FastAPI()
 
 # Route pour gérer la connexion (méthode POST)
-@app.post("/login/")
+@app.post("login/")
 async def login(request: Request):
     # 1. Récupérer les données envoyées par le formulaire (username et password)
     data = await request.json()
