@@ -52,4 +52,4 @@ async def login(request: Request):
 # Route pour vérifier que le serveur est en ligne
 @app.get("/")
 def read_root():
-    return {"message": "Bonjour, ton serveur FastAPI est en ligne !"}
+    return {"message": "Hey, ton serveur FastAPI est en ligne !"}

@@ -4,7 +4,7 @@ document.getElementById("loginForm").addEventListener("submit", async (event) =>
     const password = document.getElementById("password").value;
     try {
 
-        const response = await fetch("https://nice-school.onrender.com/login/", {
+        const response = await fetch("https://nice-school.onrender.com/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
