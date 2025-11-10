@@ -1,6 +1,6 @@
 # Nice-School :
 
-![Logo](nice-school.png)
+![Logo](/public/nice-school.png)
 
 # Présentation du projet :
 
