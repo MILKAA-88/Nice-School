@@ -14,12 +14,14 @@
     .online { color: #00ff7f; }
     .offline { color: #ff4d4d; }
     .info { margin-top: 20px; }
+    .back { border-radius: 5px; border: none; padding: 20px 20px;}
   </style>
 </head>
 <body>
   <h1>État du serveur Render</h1>
   <p id="status">Chargement...</p>
   <div class="info" id="info"></div>
+      <button onclick="window.location.href = '/public/home.html'" class="back"> Retour </button>
 
   <script>
     async function checkServer() {
