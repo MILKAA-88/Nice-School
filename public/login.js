@@ -1,5 +1,6 @@
 document.getElementById("loginForm").addEventListener("submit", async (event) => {
-    event.preventDefault(); // Empêche le formulaire de se soumettre normalement
+    event.preventDefault(); 
+    
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
     try {

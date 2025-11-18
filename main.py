@@ -13,7 +13,7 @@ start_time = time.time()
 # Configuration CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://nice-school-seven.vercel.app/"],  # URL de ton frontend Vercel
+    allow_origins=["https://nice-school-alpha.vercel.app/"],  # URL de ton frontend Vercel
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
