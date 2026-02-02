@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+body {
+    text-align: center;
+    background: #c247eb;
+    color: white;
+    font-family: 'Playfair Display', serif;
+}
+
+.nextpages {
+    background: rgb(156, 19, 194);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin: 19px;
+    padding: 20px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.logo {
+    margin: 0 auto;
+    display: flex;
+    height: 50vh;
+    border-radius: 15px;
+}
+.ent {
+    color: white;
+}

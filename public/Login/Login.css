@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #c247eb; /* #5a7af6; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 130vh;
+  margin: 0;
+  color: black;
+}
+
+h1 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Conteneur des inputs */
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+  width: 250px;
+}
+
+/* Style des champs texte */
+.inputs input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.inputs input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.4);
+}
+
+/* Bouton */
+button {
+  padding: 12px;
+  width: 250px;
+  background: #8632fb; /* #3498db; */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s;
+}
+button:hover {
+  background: #b510c4;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* Texte d’avertissement */
+p {
+  font-size: 13px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.code {
+  margin: 0 auto;
+  width: 500px;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+.h7 {
+  text-align: center;
+  color: white;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 19px; 
+}

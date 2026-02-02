@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nice School - Accueil</title>
+    <link rel="stylesheet" href="/public/home.css">
+    <link rel="icon" type="image/png" href="/public/nice-school.png">
+</head>
+<body>
+    <h1>Nice-School</h1>
+    <h2> Salut <span id="name"></span> !</h2>
+    <p> Status : BETA </p>
+    <p> Un bug ? Une idée ? <a href="https://discord.gg/NcF3gCNKnz" target="_blank"> rejoignez notre serveur Discord !</a>
+    <p class="mg">Moyenne générale : <span id="moyenneGenerale">-</span></p>
+    <h3 style="display:none;">Attention ! : évaluation pour demain en <span style="display:none;" id="evaluationAlert"></span>.Révise bien.</h3>
+    <div class="matieres">
+        <h2>Matières :</h2>
+        <div class="maMath">
+            <p>Maths : <span id="noteMaths">-</span></p>
+            <div class="lastnote" style="display: none;">
+                <p> Dernieres Notes : </p>
+                <p> 19/20</p>
+            </div>
+        </div>
+        <div class="maFr">
+            <p>Français : <span id="noteFrancais">—</span></p>
+        </div>
+        <div class="maHG">
+            <p>Histoire-Géo : <span id="noteHistoireGeo">—</span></p>
+        </div>
+        <div class="maPhy">
+            <p>Physique : <span id="notePhysique">—</span></p>
+        </div>
+        <div class="maSVT">
+            <p>SVT : <span id="noteSvt">—</span></p>
+        </div>
+        <div class="maT">
+            <p>Technologie : <span id="noteTechnologie">—</span></p>
+        </div>
+        <div class="maLa">
+            <p>Latin : <span id="noteLatin">—</span></p>
+        </div>
+    </div>
+    <button class="logOut" onclick="window.location.href='/public/Login.html'">Se déconnecter</button>
+    <p> Version : 1.3 </p>
+    <p> Service non-affilié à Aplim </p>
+    <button class="logOut" onclick="window.location.href = '/status-server-render.html'"> Status de serveur render</button>
+    <script src="/home.js"></script>
+</body>
+</html>

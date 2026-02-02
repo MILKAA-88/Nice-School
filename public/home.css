@@ -1,0 +1,78 @@
+body {
+    text-align:center;
+    background: #c247eb;
+    color: white;
+}
+.mg {
+    background: rgb(21, 19, 19);
+    border-radius: 15px;
+    padding: 50px 10px;
+    font-size: 20px;
+    color: white;
+    border: 1px solid white;
+}
+.logOut {
+    background: rgb(0, 76, 255);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+.maMath {
+    background:red;
+    border-radius: 5px;
+    padding: 20px 20px;
+    cursor: pointer;
+    border: white 0.1em solid;
+}
+.maFr {
+     background: white;
+    border-radius: 5px;
+    padding: 20px 20px;
+    cursor: pointer;
+    color: black;
+}
+.maHG {
+    background: rgb(231, 153, 8);
+    border-radius: 5px;
+    padding: 20px 20px;
+    cursor: pointer;
+     border: white 0.1em solid;
+}
+.maPhy {
+     background:green;
+    border-radius: 5px;
+    padding: 20px 20px;
+    cursor: pointer;
+     border: white 0.1em solid;
+}
+.maSVT {
+ background:rgb(211, 12, 226);
+    border-radius: 5px;
+    padding: 20px 20px;
+    cursor: pointer;
+     border: white 0.1em solid;
+}
+.maT {
+ background:rgb(208, 15, 182);
+    border-radius: 5px;
+    padding: 20px 20px;
+    cursor: pointer;
+     border: white 0.1em solid;
+}
+.maLa {
+ background:rgb(117, 193, 23);
+    border-radius: 5px;
+    padding: 20px 20px;
+    cursor: pointer;
+     border: white 0.1em solid;
+}
+h3 {
+    background: red;
+    border-radius: 0.5em;
+    padding: 1em 10em;
+}
+h2 {
+    font-size: 20px;
+}

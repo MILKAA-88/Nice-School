@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nice School - Connexion</title>
+    <link rel="stylesheet" href="/public/Login/Login.css">
+    <link rel="icon" type="image/png" href="/public/nice-school.png">
+</head>
+<body>
+    <div class="security" style="display: none;">
+        <h7>Test de sécurité</h7>
+        <p id="question"></p>
+        <button class="reponse"></button>
+        <button class="reponse"></button>
+        <button class="reponse"></button>
+        <button class="reponse"></button>
+        <button class="reponse"></button>
+        <button class="reponse"></button>
+    </div>
+
+    <h1>Se connecter</h1>
+    <form id="loginForm" class="inputs">
+        <input type="text" id="username" placeholder="Identifiant École Directe" required>
+        <input type="password" id="password" placeholder="Mot de passe École Directe" required>
+        <button type="submit">Se connecter</button>
+    </form>
+
+    <button onclick="window.location.href = '/public/home.html'">Enter</button>
+
+    <div class="remember-me">
+        <input type="checkbox" id="rememberMe" class="radio">
+        <label for="rememberMe" style="color: white;">Se souvenir de moi</label>
+    </div>
+    <p id="status" class="status"></p>
+    <p>Vos identifiants ne sont pas enregistrés !</p>
+
+    <h2>Nice-School est open-source !</h2>
+    <p>Ce qui veut dire que vous pourrez voir le code source.</p>
+    <a href="https://github.com/MILKAA-88/Nice-School" title="Le dépôt GitHub">Voir le code source</a>
+    <img src="/Picture of code source NC .png" class="code" alt="Illustration du code source">
+    <footer>
+        <a href="/mentionlegalect/mentionslegal.html">Mentions légales</a>
+        <a href="/mentionlegalect/crédits.html">Crédits</a>
+        <a href="/mentionlegalect/contacts.html">Nous contacter</a>
+    </footer>
+</body>
+</html>

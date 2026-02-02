@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Status du serveur</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: white;
+      text-align: center;
+      padding: 50px;
+    }
+    .online { color: #00ff7f; }
+    .offline { color: #ff4d4d; }
+    .info { margin-top: 20px; }
+    .back { border-radius: 5px; border: none; padding: 20px 20px;}
+  </style>
+</head>
+<body>
+  <h1>État du serveur Render</h1>
+  <p id="status">Chargement...</p>
+  <div class="info" id="info"></div>
+      <button onclick="window.location.href = '/public/home.html'" class="back"> Retour </button>
+
+  <script>
+    async function checkServer() {
+      const url = "https://ton-backend.onrender.com/status"; // ← change ici ton vrai lien Render
+      const start = performance.now();
+      try {
+        const res = await fetch(url);
+        const time = Math.round(performance.now() - start);
+        if (!res.ok) throw new Error("Erreur serveur");
+        const data = await res.json();
+        document.getElementById("status").innerHTML = "🟢 En ligne";
+        document.getElementById("status").className = "online";
+        document.getElementById("info").innerHTML = `
+          <p>Temps de réponse : ${time} ms</p>
+          <p>Uptime : ${data.uptime_seconds}s</p>
+          <p>Version : ${data.version}</p>
+          <p>Environnement : ${data.environment}</p>
+          <p>Heure du serveur : ${data.server_time}</p>
+        `;
+      } catch (err) {
+        document.getElementById("status").innerHTML = "🔴 Hors ligne";
+        document.getElementById("status").className = "offline";
+        document.getElementById("info").innerHTML = "";
+      }
+    }
+    checkServer();
+  </script>
+</body>
+</html>
